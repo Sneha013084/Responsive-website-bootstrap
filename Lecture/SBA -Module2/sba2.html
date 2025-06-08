@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Accessible Design Co.</title>
+    <link rel="stylesheet" href="sba2.css"/>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../../Logo-image.png" alt ="Accessible Design Co.">
+        </div>
+        <nav role="navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-us">About-Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   <main>
+    <section id="home" class="hero" aria-labelledby="hero-title">
+        <h1 id="hero-title">Welcome to Accesible Design Co.</h1>
+        <p>Creating inclusive and accessible digital experience.</p>
+        <a href="#contact" class="cta-button"> Get Started</a>
+    </section>
+
+    <section id=" About-Us" aria-labelledby="about-title">
+        <h2 id="about title">About Us</h2>
+        <p>"We are a passionate team of web application designers who love to create intuitive and user-friendly experiences. Our mission is to help businesses thrive online by providing cutting-edge design and development solutions. We believe in a collaborative approach, and we work closely with our clients to ensure their vision is realized. Our team members have a diverse background, and we are experts in [mention specific technologies/areas of expertise]. Our portfolio showcases a range of projects, from [mention a specific type of project] to [mention another type of project]. Contact us today to learn more about how we can help you achieve your online goals!"  </p>
+    </section>
+
+    <section id="services" aria-label="service-title">
+        <h2 id="service-title">Our Services</h2>
+        <div class="service-grid">
+        <article>
+           <img src="" alt="web design icon" />
+           <h3>Accesible Web Design</h3>
+           <p> Creating websites that are easy to use for everyone.</p>
+        </article>
+        <article>
+            <image src=""     alt=""Audit icon"></image>
+            <h3> Accessibility Audits</h3>
+            <p>We identify and resolve accessibility barriers.</p>
+
+        </article>
+        <article>
+           <img src="" alt="consulting icon">
+           <h3>Consulting</h3>
+           <p>Guidence and strategies for inclusive design.</p>
+        </article>
+        </div>
+    </section>
+    <section id="contact" aria-labelledby="contact title">
+        <h2 id="contact-title">Contact-Us</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name :</label>
+                <input id="name" name="name" type="text" required aria-required="true"/>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input id="email" name="email" type="email"required aria-required="true"/>
+            </div>
+            </div class="form-group">
+                <label for="subject"> Subject :</label>
+                <input id="subject" name="subject" type="text"/>
+            </div>
+            <div class="form-group">
+                <label for="message"> Message:</label>
+                <textarea id="message" name="message" rows="4" aria-describedby="messageHelp"></textarea>
+                <small id="messageHelp">Please include any relevant deatils.</small>
+            <div>
+            <button type="submit">Send Message</button>
+           
+        </form>
+        
+    </section>
+   </main> 
+   <footer>
+    <p> &copy; 2025 Accesible Design Co. All rights reserved</p>
+    <ul class="social-links">
+        <li><a href="#" aria-label="Facebook"> Facebook</a></li>
+        <li><a href="#" aria-label="Twitter"> Twitter</a></li>
+        <li><a href="#" aria-label="Linkedln"> Linkedln </a></li>
+    </ul>
+    <address> Contact:<a href="mailto:info@accessibleco.com">info@accessibleco.com</a></address>
+</footer>
+</body>
+</html>
