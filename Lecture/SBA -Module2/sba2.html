@@ -9,46 +9,65 @@
 <body>
     <header>
         <div class="logo">
-            <img src="../../Logo-image.png" alt ="Accessible Design Co.">
+            <img src="images/Logo-image.png" alt ="Accessible Design Co.">
         </div>
         <nav role="navigation" aria-label="Main navigation">
+             <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg"></a></li>
+                <li ><a href="#home"> Home</a></li>
+                <li ><a href="#about-us">About-Us</a></li>
+                <li ><a href="#services">Services</a></li>
+                <li ><a href="#contact">Contact</a></li>
+            </ul>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about-us">About-Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="hideOnMobile"><a href="#home">Home</a></li>
+                <li class="hideOnMobile"><a href="#about-us">About-Us</a></li>
+                <li class="hideOnMobile"><a href="#services">Services</a></li>
+                <li class ="hideOnMobile"><a href="#contact">Contact</a></li>
+                <li class"menu" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
             </ul>
         </nav>
+        <script>
+            function showSidebar(){
+                const sidebar =document.querySelector('sidebar')
+                sidebar.style.display= 'flex'
+            }
+            function hideSidebar(){
+                const sidebar =document.querySelector('sidebar')
+                sidebar.style.display= 'none'
+            }
+        </script>
+        
     </header>
 
    <main>
     <section id="home" class="hero" aria-labelledby="hero-title">
-        <h1 id="hero-title">Welcome to Accesible Design Co.</h1>
+        <h1 id="hero-title">Welcome to Accessible Design Co.</h1>
         <p>Creating inclusive and accessible digital experience.</p>
         <a href="#contact" class="cta-button"> Get Started</a>
     </section>
 
-    <section id=" About-Us" aria-labelledby="about-title">
-        <h2 id="about title">About Us</h2>
-        <p>"We are a passionate team of web application designers who love to create intuitive and user-friendly experiences. Our mission is to help businesses thrive online by providing cutting-edge design and development solutions. We believe in a collaborative approach, and we work closely with our clients to ensure their vision is realized. Our team members have a diverse background, and we are experts in [mention specific technologies/areas of expertise]. Our portfolio showcases a range of projects, from [mention a specific type of project] to [mention another type of project]. Contact us today to learn more about how we can help you achieve your online goals!"  </p>
+    <section id="About-Us"  aria-labelledby="about-title">
+        <h2 id="about-title">About Us</h2>
+        <p>We are a passionate team of web application designers who love to create intuitive and user-friendly experiences. Our mission is to help businesses thrive online by providing cutting-edge design and development solutions. We believe in a collaborative approach, and we work closely with our clients to ensure their vision is realized. Our team members have a diverse background, and we are experts in accessible web design, accessibility audits and consulting. Our portfolio showcases a range of projects, from responsive web design to accessibility web design. Contact us today to learn more about how we can help you achieve your online goals.  </p>
     </section>
 
     <section id="services" aria-label="service-title">
         <h2 id="service-title">Our Services</h2>
         <div class="service-grid">
         <article>
-           <img src="" alt="web design icon" />
-           <h3>Accesible Web Design</h3>
+           <img src= "images/webdesign.svg" alt="web design icon" />
+           <h3>Accessible Web Design</h3>
            <p> Creating websites that are easy to use for everyone.</p>
         </article>
         <article>
-            <image src=""     alt=""Audit icon"></image>
+            <img src="images/audit.svg"     alt="Audit icon"/>
             <h3> Accessibility Audits</h3>
             <p>We identify and resolve accessibility barriers.</p>
 
         </article>
         <article>
-           <img src="" alt="consulting icon">
+           <img src="images/consulting.svg" alt="consulting icon"/>
            <h3>Consulting</h3>
            <p>Guidence and strategies for inclusive design.</p>
         </article>
@@ -59,15 +78,15 @@
         <form>
             <div class="form-group">
                 <label for="name">Name :</label>
-                <input id="name" name="name" type="text" required aria-required="true"/>
+                <input id="name" name="name" type="text" required aria-required="true" placeholder="Enter your name"/>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input id="email" name="email" type="email"required aria-required="true"/>
+                <input id="email" name="email" type="email"required aria-required="true" placeholder="you@example.com"/>
             </div>
             </div class="form-group">
                 <label for="subject"> Subject :</label>
-                <input id="subject" name="subject" type="text"/>
+                <input id="subject" name="subject" type="text" placeholder="Subjectof your message" />
             </div>
             <div class="form-group">
                 <label for="message"> Message:</label>
