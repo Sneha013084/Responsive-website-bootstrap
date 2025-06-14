@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Accessible form with ARIA attributes</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <h2> Contact Us</h2>
+    <form aria-labelledby="form-title">
+        <h3 id="form-title"> Contact Form</h3>
+    <div>
+    
+        <label for="username">Username</label>
+        <input 
+        type="text" 
+        id="name"
+        name="name" 
+        aria-required= "true"
+        aria-describedby="name-desc"
+       >
+
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input
+        type="email"
+        id="email"
+        name="email"
+        aria-required="true"
+        aria-describedby="email-desc"
+        >
+    </div>
+    <div>
+
+        <label for="message">Message:</label>
+        <textarea
+           id="message"
+           name="message"
+           aria-describedby="message-desc"
+           ></textarea>
+           <small id="message-desc"> Share your message with us.</small>
+    </div>
+     <button type=" submit"aria-label = "Send your message">Submit</button>
+    </form>
+    
+</body>
+</html>
